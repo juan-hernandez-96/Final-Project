@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckxad18w3ww7g"]
 
-[ext_resource type="Texture2D" uid="uid://8c8crufa5in" path="res://images/9f9f84cf1661937bb8cfcfee04dcef67-removebg-preview.png" id="1_2uklg"]
 [ext_resource type="Script" uid="uid://djof6dowayiwk" path="res://Codes/mega_control.gd" id="1_ia767"]
+[ext_resource type="Texture2D" uid="uid://cj5fjeyso38nn" path="res://images/6e954e7b4487f85f814fd3ea5bc1a477-removebg-preview.png" id="2_ia767"]
 
 [sub_resource type="Animation" id="Animation_hd6xd"]
 length = 0.001
@@ -68,6 +68,7 @@ texture_filter = 1
 script = ExtResource("1_ia767")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -80,12 +81,12 @@ speed_scale = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 texture_filter = 1
-texture = ExtResource("1_2uklg")
-hframes = 10
-vframes = 8
-frame = 30
+rotation = -0.00780287
+texture = ExtResource("2_ia767")
+hframes = 9
+vframes = 9
 region_rect = Rect2(0, 0, 28, 28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 5)
+position = Vector2(1, 4)
 shape = SubResource("CapsuleShape2D_tqida")

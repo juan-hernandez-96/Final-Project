@@ -17,13 +17,13 @@ hframes = 4
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8.5, -13)
+position = Vector2(8, -18)
 shape = SubResource("RectangleShape2D_8o1l4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CollisionShape2D"]
 position = Vector2(25, 21)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/StaticBody2D"]
-position = Vector2(-24.75, 15)
+position = Vector2(-24.5, 1)
 shape = SubResource("RectangleShape2D_c2iur")
 debug_color = Color(0.832905, 0.360168, 0.40678, 0.42)

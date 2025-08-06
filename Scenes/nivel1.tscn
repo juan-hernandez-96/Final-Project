@@ -12,10 +12,10 @@ scale = Vector2(0.84, 0.59375)
 texture = ExtResource("1_s1ye4")
 
 [node name="block2" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-390, -25)
+position = Vector2(-390, -22)
 
 [node name="block3" parent="." instance=ExtResource("2_cm6mf")]
 position = Vector2(-270, -85)
 
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-385, -74)
+position = Vector2(-384, -76)
