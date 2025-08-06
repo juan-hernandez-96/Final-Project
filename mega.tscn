@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://ckxad18w3ww7g"]
+[gd_scene load_steps=2 format=3 uid="uid://ckxad18w3ww7g"]
 
-[node name="Mega" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bhg6epq4na54l" path="res://images/e5bdbbd629a757683d4a3a674d059ba1-removebg-preview.png" id="1_2uklg"]
+
+[node name="Mega" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_2uklg")
+hframes = 12
+vframes = 11
