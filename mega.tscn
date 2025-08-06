@@ -1,9 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckxad18w3ww7g"]
 
-[ext_resource type="Texture2D" uid="uid://bppdg5b4yec66" path="res://images/6e954e7b4487f85f814fd3ea5bc1a477-removebg-preview.png" id="1_2uklg"]
+[ext_resource type="Texture2D" uid="uid://8c8crufa5in" path="res://images/9f9f84cf1661937bb8cfcfee04dcef67-removebg-preview.png" id="1_2uklg"]
 
-[node name="Hood" type="Sprite2D"]
+[node name="elf" type="Sprite2D"]
 texture_filter = 1
 texture = ExtResource("1_2uklg")
-hframes = 8
+hframes = 10
 vframes = 8
+frame = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
