@@ -7,15 +7,18 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Forest-and-trees-free-pixel-backgrounds7" type="Sprite2D" parent="."]
-position = Vector2(-10, -188)
-scale = Vector2(0.84, 0.59375)
+position = Vector2(83, -298)
+scale = Vector2(1.25667, 0.953333)
 texture = ExtResource("1_s1ye4")
 
 [node name="block2" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-390, -22)
+position = Vector2(-580, 48)
 
 [node name="block3" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-270, -85)
+position = Vector2(-372, 47)
+
+[node name="block" parent="." instance=ExtResource("2_cm6mf")]
+position = Vector2(-730, 56)
 
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-380, -78)
+position = Vector2(-717, 0)
