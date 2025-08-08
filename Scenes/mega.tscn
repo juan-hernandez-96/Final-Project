@@ -108,6 +108,7 @@ script = ExtResource("1_ia767")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_left = -9999975
 
 [node name="Node2D" type="Node2D" parent="."]
 
