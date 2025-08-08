@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://chosis047cl86"]
+[gd_scene load_steps=8 format=3 uid="uid://chosis047cl86"]
 
 [ext_resource type="AudioStream" uid="uid://doyj5vm5vtsek" path="res://Music/Memories of Green.mp3" id="1_01tp3"]
 [ext_resource type="Texture2D" uid="uid://cft3ci8tybmrp" path="res://images/nivel1bg.png" id="1_s1ye4"]
 [ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="2_cm6mf"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_01tp3"]
+[ext_resource type="PackedScene" uid="uid://bfe7i88v3sgvj" path="res://Scenes/portal.tscn" id="4_ynj8v"]
+[ext_resource type="PackedScene" uid="uid://bxhb436h13p8o" path="res://Scenes/portal2.tscn" id="5_tvmah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8yyg"]
+size = Vector2(2259, 110)
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,33 +18,50 @@ volume_db = -11.514
 autoplay = true
 
 [node name="Forest-and-trees-free-pixel-backgrounds7" type="Sprite2D" parent="."]
-position = Vector2(-287, -133)
-scale = Vector2(1.29222, 0.678333)
+position = Vector2(-287, -70.9887)
+scale = Vector2(1.30317, 0.781648)
 texture = ExtResource("1_s1ye4")
 
 [node name="block2" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-562, 56)
+position = Vector2(-617, 61)
 
 [node name="block3" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-372, 54)
+position = Vector2(-428, 28)
 
 [node name="block" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-730, 56)
+position = Vector2(-799, 93)
 
 [node name="dirtblock" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-195, 58)
-
-[node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-717, 0)
+position = Vector2(-221, 77)
 
 [node name="dirtblock2" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-27, -2)
+position = Vector2(-45, 27)
 
 [node name="dirtblock3" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(132, -87)
+position = Vector2(96, -54)
 
 [node name="dirtblock4" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(300, -187)
+position = Vector2(254, -120)
 
 [node name="dirtblock5" parent="." instance=ExtResource("2_cm6mf")]
 position = Vector2(482, 55)
+
+[node name="Node2D" parent="." instance=ExtResource("4_ynj8v")]
+position = Vector2(485, -9)
+
+[node name="dirtblock6" parent="." instance=ExtResource("2_cm6mf")]
+position = Vector2(-1170, 98)
+
+[node name="Node2D2" parent="." instance=ExtResource("5_tvmah")]
+position = Vector2(-1160, 34)
+
+[node name="elf" parent="." instance=ExtResource("3_01tp3")]
+position = Vector2(-791, 50)
+
+[node name="death_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
+position = Vector2(-290.5, 261)
+shape = SubResource("RectangleShape2D_x8yyg")
+
+[connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]

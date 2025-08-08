@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfe7i88v3sgvj"]
+
+[ext_resource type="Texture2D" uid="uid://c1xjq3f5nhe4t" path="res://images/portal-.png" id="1_j20fm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oi2tk"]
+radius = 14.0
+height = 54.0
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3.625, -6.125)
+scale = Vector2(0.189844, 0.161719)
+texture = ExtResource("1_j20fm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -6)
+shape = SubResource("CapsuleShape2D_oi2tk")
+debug_color = Color(0.596348, 0.472225, 0.126445, 0.42)

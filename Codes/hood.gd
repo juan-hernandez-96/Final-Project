@@ -22,3 +22,6 @@ func _physics_process(delta):
 		jump.play()
 	
 	move_and_slide()
+
+func _on_death_zone_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://ckxad18w3ww7g"]
 
-[ext_resource type="Script" uid="uid://djof6dowayiwk" path="res://Codes/mega_control.gd" id="1_ia767"]
+[ext_resource type="Script" uid="uid://djof6dowayiwk" path="res://Codes/hood.gd" id="1_ia767"]
 [ext_resource type="Texture2D" uid="uid://bkoxxdryoad0r" path="res://images/personaje.png" id="2_ia767"]
 [ext_resource type="AudioStream" uid="uid://dno88fkltubbm" path="res://SFX/pixel-jump.mp3" id="3_mahqn"]
 
@@ -102,7 +102,7 @@ _data = {
 radius = 18.0
 height = 56.0
 
-[node name="hood" type="CharacterBody2D"]
+[node name="hood" type="CharacterBody2D" groups=["jugador"]]
 texture_filter = 1
 script = ExtResource("1_ia767")
 
