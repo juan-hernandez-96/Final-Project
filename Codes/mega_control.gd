@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var jump = $jump
+
 var velocidad = 200
 var brinco = -400
 var gravedad = 1000
@@ -17,5 +19,6 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_up") and is_on_floor(): 
 		velocity.y = brinco
+		jump.play()
 	
 	move_and_slide()

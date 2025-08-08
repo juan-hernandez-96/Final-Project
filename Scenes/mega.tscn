@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckxad18w3ww7g"]
+[gd_scene load_steps=12 format=3 uid="uid://ckxad18w3ww7g"]
 
 [ext_resource type="Script" uid="uid://djof6dowayiwk" path="res://Codes/mega_control.gd" id="1_ia767"]
 [ext_resource type="Texture2D" uid="uid://bkoxxdryoad0r" path="res://images/6e954e7b4487f85f814fd3ea5bc1a477-removebg-preview.png" id="2_ia767"]
+[ext_resource type="AudioStream" uid="uid://dno88fkltubbm" path="res://SFX/pixel-jump.mp3" id="3_mahqn"]
 
 [sub_resource type="Animation" id="Animation_hd6xd"]
 length = 0.001
@@ -130,3 +131,7 @@ region_rect = Rect2(0, 0, 28, 28)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 1)
 shape = SubResource("CapsuleShape2D_tqida")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mahqn")
+volume_db = -10.846
