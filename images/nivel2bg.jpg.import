@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cft3ci8tybmrp"
-path="res://.godot/imported/Forest-and-Trees-Free-Pixel-Backgrounds7.png-1dd47e2f6b4500ee68ccf95a181eb09d.ctex"
+uid="uid://c1mdve27lkha8"
+path="res://.godot/imported/nivel2bg.jpg-c63f36ee392916ca3d75027f88e18ff3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Forest-and-Trees-Free-Pixel-Backgrounds7.png"
-dest_files=["res://.godot/imported/Forest-and-Trees-Free-Pixel-Backgrounds7.png-1dd47e2f6b4500ee68ccf95a181eb09d.ctex"]
+source_file="res://images/nivel2bg.jpg"
+dest_files=["res://.godot/imported/nivel2bg.jpg-c63f36ee392916ca3d75027f88e18ff3.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8576j60qiof1"]
 
-[ext_resource type="Texture2D" uid="uid://j78xy1647sgl" path="res://images/daca2cb61a6df8524e3b5e652e99c071-removebg-preview.png" id="1_ejx3s"]
+[ext_resource type="Texture2D" uid="uid://j78xy1647sgl" path="res://images/bloques.png" id="1_ejx3s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8o1l4"]
 size = Vector2(73, 44)
@@ -8,7 +8,7 @@ size = Vector2(73, 44)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2iur"]
 size = Vector2(71.5, 30)
 
-[node name="block" type="Area2D"]
+[node name="dirtblock" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

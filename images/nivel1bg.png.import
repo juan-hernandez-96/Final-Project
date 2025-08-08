@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j78xy1647sgl"
-path="res://.godot/imported/daca2cb61a6df8524e3b5e652e99c071-removebg-preview.png-1f06decbe036e221be5dd9ff92a61a55.ctex"
+uid="uid://cft3ci8tybmrp"
+path="res://.godot/imported/nivel1bg.png-a186e80a081a7f2aed49868fcac4e720.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/daca2cb61a6df8524e3b5e652e99c071-removebg-preview.png"
-dest_files=["res://.godot/imported/daca2cb61a6df8524e3b5e652e99c071-removebg-preview.png-1f06decbe036e221be5dd9ff92a61a55.ctex"]
+source_file="res://images/nivel1bg.png"
+dest_files=["res://.godot/imported/nivel1bg.png-a186e80a081a7f2aed49868fcac4e720.ctex"]
 
 [params]
 

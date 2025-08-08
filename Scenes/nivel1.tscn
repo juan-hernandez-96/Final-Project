@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://chosis047cl86"]
 
-[ext_resource type="Texture2D" uid="uid://cft3ci8tybmrp" path="res://images/Forest-and-Trees-Free-Pixel-Backgrounds7.png" id="1_s1ye4"]
+[ext_resource type="Texture2D" uid="uid://cft3ci8tybmrp" path="res://images/nivel1bg.png" id="1_s1ye4"]
 [ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="2_cm6mf"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_01tp3"]
 
