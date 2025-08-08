@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnhx5o5tln0rt"]
+[gd_scene load_steps=5 format=3 uid="uid://bnhx5o5tln0rt"]
 
 [ext_resource type="Texture2D" uid="uid://j78xy1647sgl" path="res://images/bloques.png" id="1_2dlcr"]
+[ext_resource type="Script" uid="uid://dkw8suc3lcpe7" path="res://Codes/block_2.gd" id="1_7ol3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ol3p"]
 size = Vector2(106, 44)
@@ -8,7 +9,8 @@ size = Vector2(106, 44)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fcn1"]
 size = Vector2(101, 26)
 
-[node name="Node2D" type="Area2D"]
+[node name="black_block" type="Area2D"]
+script = ExtResource("1_7ol3p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -30,3 +32,5 @@ position = Vector2(-77, -55)
 position = Vector2(78, 72)
 shape = SubResource("RectangleShape2D_5fcn1")
 debug_color = Color(0.776183, 0.428418, 0.281, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

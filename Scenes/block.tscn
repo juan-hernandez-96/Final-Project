@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8576j60qiof1"]
+[gd_scene load_steps=5 format=3 uid="uid://b8576j60qiof1"]
 
 [ext_resource type="Texture2D" uid="uid://j78xy1647sgl" path="res://images/bloques.png" id="1_ejx3s"]
+
+[sub_resource type="GDScript" id="GDScript_ejx3s"]
+script/source = "extends Area2D
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8o1l4"]
 size = Vector2(73, 44)
@@ -9,6 +13,7 @@ size = Vector2(73, 44)
 size = Vector2(71.5, 30)
 
 [node name="dirtblock" type="Area2D"]
+script = SubResource("GDScript_ejx3s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

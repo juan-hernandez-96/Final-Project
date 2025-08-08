@@ -1,21 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmnfdvrtakowi"]
+[gd_scene load_steps=6 format=3 uid="uid://cmnfdvrtakowi"]
 
 [ext_resource type="Texture2D" uid="uid://c1mdve27lkha8" path="res://images/nivel2bg.jpg" id="1_bleda"]
+[ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="2_bvbaa"]
 [ext_resource type="PackedScene" uid="uid://bnhx5o5tln0rt" path="res://Scenes/block2.tscn" id="2_mtcpv"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_bvbaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvbaa"]
+size = Vector2(2976, 45)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1260, 206)
-scale = Vector2(3.77211, 3.42233)
+position = Vector2(634.75, 440.5)
+scale = Vector2(2.9449, 2.70146)
 texture = ExtResource("1_bleda")
 
+[node name="dirtblock" parent="." instance=ExtResource("2_bvbaa")]
+position = Vector2(-145, 781)
+
 [node name="Node2D" parent="." instance=ExtResource("2_mtcpv")]
-position = Vector2(102, 605)
+position = Vector2(26, 798)
 
 [node name="Node2D2" parent="." instance=ExtResource("2_mtcpv")]
-position = Vector2(268, 597)
+position = Vector2(273, 792)
 
 [node name="hood" parent="." instance=ExtResource("3_bvbaa")]
-position = Vector2(125, 541)
+position = Vector2(-133, 738)
+
+[node name="death_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
+position = Vector2(1047, 855)
+shape = SubResource("RectangleShape2D_bvbaa")
+
+[connection signal="body_entered" from="death_zone" to="hood" method="_on_death_zone_body_entered"]

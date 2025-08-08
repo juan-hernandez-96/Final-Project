@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckxad18w3ww7g"]
+[gd_scene load_steps=13 format=3 uid="uid://ckxad18w3ww7g"]
 
 [ext_resource type="Script" uid="uid://djof6dowayiwk" path="res://Codes/hood.gd" id="1_ia767"]
 [ext_resource type="Texture2D" uid="uid://bkoxxdryoad0r" path="res://images/personaje.png" id="2_ia767"]
 [ext_resource type="AudioStream" uid="uid://dno88fkltubbm" path="res://SFX/pixel-jump.mp3" id="3_mahqn"]
+[ext_resource type="AudioStream" uid="uid://bwgpcpvar54ir" path="res://SFX/awwww-sound-fx.mp3" id="4_p28lj"]
 
 [sub_resource type="Animation" id="Animation_hd6xd"]
 length = 0.001
@@ -136,3 +137,8 @@ shape = SubResource("CapsuleShape2D_tqida")
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_mahqn")
 volume_db = -10.846
+
+[node name="death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_p28lj")
+volume_db = -1.727
+pitch_scale = 3.1

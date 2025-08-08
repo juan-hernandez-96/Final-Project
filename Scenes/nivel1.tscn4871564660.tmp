@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chosis047cl86"]
+[gd_scene load_steps=8 format=3 uid="uid://chosis047cl86"]
 
 [ext_resource type="AudioStream" uid="uid://doyj5vm5vtsek" path="res://Music/Memories of Green.mp3" id="1_01tp3"]
 [ext_resource type="Texture2D" uid="uid://cft3ci8tybmrp" path="res://images/nivel1bg.png" id="1_s1ye4"]
@@ -6,10 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_01tp3"]
 [ext_resource type="PackedScene" uid="uid://bfe7i88v3sgvj" path="res://Scenes/portal.tscn" id="4_ynj8v"]
 [ext_resource type="PackedScene" uid="uid://bxhb436h13p8o" path="res://Scenes/portal2.tscn" id="5_tvmah"]
-[ext_resource type="Texture2D" uid="uid://d2vuikgrosq4y" path="res://images/dirt.jpg" id="7_x8yyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8yyg"]
-size = Vector2(2931, 12.5)
+size = Vector2(2259, 15)
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,38 +55,13 @@ position = Vector2(-1170, 98)
 [node name="Node2D2" parent="." instance=ExtResource("5_tvmah")]
 position = Vector2(-1160, 34)
 
+[node name="elf" parent="." instance=ExtResource("3_01tp3")]
+position = Vector2(-785, 42)
+
 [node name="death_zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
-position = Vector2(-365.5, 191.25)
+position = Vector2(-289, 205)
 shape = SubResource("RectangleShape2D_x8yyg")
-
-[node name="Dirt" type="Sprite2D" parent="."]
-position = Vector2(-1191, 418.5)
-scale = Vector2(1, 1.64394)
-texture = ExtResource("7_x8yyg")
-
-[node name="Dirt2" type="Sprite2D" parent="."]
-position = Vector2(-734, 419)
-scale = Vector2(1, 1.63636)
-texture = ExtResource("7_x8yyg")
-
-[node name="Dirt3" type="Sprite2D" parent="."]
-position = Vector2(-277, 418.5)
-scale = Vector2(1, 1.62879)
-texture = ExtResource("7_x8yyg")
-
-[node name="Dirt4" type="Sprite2D" parent="."]
-position = Vector2(180, 418.5)
-scale = Vector2(1, 1.61364)
-texture = ExtResource("7_x8yyg")
-
-[node name="Dirt5" type="Sprite2D" parent="."]
-position = Vector2(625, 416)
-scale = Vector2(0.955142, 1.62121)
-texture = ExtResource("7_x8yyg")
-
-[node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-785, 42)
 
 [connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]

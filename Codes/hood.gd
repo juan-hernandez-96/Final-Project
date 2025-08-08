@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @onready var jump = $jump
+@onready var death: AudioStreamPlayer2D = $death
+
 
 var velocidad = 200
 var brinco = -400
@@ -24,4 +26,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
+	death.play(.15)
+	await get_tree().create_timer(.25).timeout
 	get_tree().reload_current_scene()
+	
