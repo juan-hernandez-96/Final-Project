@@ -18,4 +18,4 @@ position = Vector2(-390, -22)
 position = Vector2(-270, -85)
 
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-384, -76)
+position = Vector2(-380, -78)

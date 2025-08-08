@@ -1,21 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckxad18w3ww7g"]
+[gd_scene load_steps=11 format=3 uid="uid://ckxad18w3ww7g"]
 
 [ext_resource type="Script" uid="uid://djof6dowayiwk" path="res://Codes/mega_control.gd" id="1_ia767"]
-[ext_resource type="Texture2D" uid="uid://cj5fjeyso38nn" path="res://images/6e954e7b4487f85f814fd3ea5bc1a477-removebg-preview.png" id="2_ia767"]
+[ext_resource type="Texture2D" uid="uid://bkoxxdryoad0r" path="res://images/6e954e7b4487f85f814fd3ea5bc1a477-removebg-preview.png" id="2_ia767"]
 
 [sub_resource type="Animation" id="Animation_hd6xd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath("Node2D/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [77]
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_mific"]
@@ -52,18 +52,56 @@ tracks/0/keys = {
 "values": [70, 70, 71, 71, 72, 72, 73, 73, 74, 74, 75, 75, 76, 76, 77, 77, 75, 75]
 }
 
+[sub_resource type="Animation" id="Animation_ia767"]
+resource_name = "jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Node2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_mahqn"]
+resource_name = "idle2"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 8, 9, 8, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_p28lj"]
+resource_name = "walk-r"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mific"]
 _data = {
 &"RESET": SubResource("Animation_hd6xd"),
 &"idle": SubResource("Animation_mific"),
+&"idle2": SubResource("Animation_mahqn"),
+&"jump": SubResource("Animation_ia767"),
+&"walk-r": SubResource("Animation_p28lj"),
 &"wlk-rght": SubResource("Animation_2uklg")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tqida"]
-radius = 20.0
+radius = 18.0
 height = 56.0
 
-[node name="elf" type="CharacterBody2D"]
+[node name="hood" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_ia767")
 
@@ -81,12 +119,14 @@ speed_scale = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 texture_filter = 1
+position = Vector2(-1.23937, -1.99812)
 rotation = -0.00780287
+scale = Vector2(0.982268, 1)
 texture = ExtResource("2_ia767")
-hframes = 9
+hframes = 8
 vframes = 9
 region_rect = Rect2(0, 0, 28, 28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 4)
+position = Vector2(-3, 1)
 shape = SubResource("CapsuleShape2D_tqida")

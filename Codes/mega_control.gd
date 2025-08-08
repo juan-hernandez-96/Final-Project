@@ -6,6 +6,7 @@ var gravedad = 1000
 
 func _ready():
 	add_to_group("jugador")
+	$Node2D/AnimationPlayer.play("idle2")
 
 func _physics_process(delta):
 	var direccion = Input.get_axis("ui_left","ui_right")
