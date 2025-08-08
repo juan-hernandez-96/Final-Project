@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmnfdvrtakowi"]
+[gd_scene load_steps=4 format=3 uid="uid://cmnfdvrtakowi"]
 
 [ext_resource type="Texture2D" uid="uid://c1mdve27lkha8" path="res://images/nivel2bg.jpg" id="1_bleda"]
+[ext_resource type="PackedScene" uid="uid://bnhx5o5tln0rt" path="res://Scenes/block2.tscn" id="2_mtcpv"]
+[ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_bvbaa"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,3 +10,12 @@
 position = Vector2(1260, 206)
 scale = Vector2(3.77211, 3.42233)
 texture = ExtResource("1_bleda")
+
+[node name="Node2D" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(102, 605)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(268, 597)
+
+[node name="hood" parent="." instance=ExtResource("3_bvbaa")]
+position = Vector2(125, 541)
