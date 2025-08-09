@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmnfdvrtakowi"]
 
-[ext_resource type="Texture2D" uid="uid://c1mdve27lkha8" path="res://images/nivel2bg.jpg" id="1_bleda"]
+[ext_resource type="Texture2D" uid="uid://c1mdve27lkha8" path="res://Images/nivel2bg.jpg" id="1_bleda"]
 [ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="2_bvbaa"]
 [ext_resource type="PackedScene" uid="uid://bnhx5o5tln0rt" path="res://Scenes/block2.tscn" id="2_mtcpv"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_bvbaa"]

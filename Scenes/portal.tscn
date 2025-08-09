@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfe7i88v3sgvj"]
 
-[ext_resource type="Texture2D" uid="uid://c1xjq3f5nhe4t" path="res://images/portal-.png" id="1_j20fm"]
+[ext_resource type="Texture2D" uid="uid://c1xjq3f5nhe4t" path="res://Images/portal-.png" id="1_j20fm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oi2tk"]
 radius = 14.0
 height = 54.0
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Portal1" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

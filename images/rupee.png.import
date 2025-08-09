@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1mdve27lkha8"
-path="res://.godot/imported/nivel2bg.jpg-3812544491c98c02ccfdb9542ec8c042.ctex"
+uid="uid://bmrlwuxjiqhv6"
+path="res://.godot/imported/rupee.png-0713700bf3775eb7580a9b8fb771a8fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/nivel2bg.jpg"
-dest_files=["res://.godot/imported/nivel2bg.jpg-3812544491c98c02ccfdb9542ec8c042.ctex"]
+source_file="res://Images/rupee.png"
+dest_files=["res://.godot/imported/rupee.png-0713700bf3775eb7580a9b8fb771a8fa.ctex"]
 
 [params]
 

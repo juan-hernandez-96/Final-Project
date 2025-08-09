@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bo12kexbqxhh"]
+
+[ext_resource type="Texture2D" uid="uid://bmrlwuxjiqhv6" path="res://Images/rupee.png" id="1_870tr"]
+[ext_resource type="Script" uid="uid://c08pybbq3i06u" path="res://Scripts/rupee.gd" id="1_qeay2"]
+[ext_resource type="AudioStream" uid="uid://dric1o0y6rgfq" path="res://SFX/rupee.mp3" id="3_kdxqw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qeay2"]
+radius = 7.0
+height = 16.0
+
+[node name="rupee" type="Area2D" groups=["rupee"]]
+script = ExtResource("1_qeay2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qeay2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7.15256e-07)
+scale = Vector2(0.0647321, 0.0571429)
+texture = ExtResource("1_870tr")
+
+[node name="rupee" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kdxqw")
+volume_db = 5.572
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
