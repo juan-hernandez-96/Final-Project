@@ -99,8 +99,29 @@ offset_right = -212.0
 offset_bottom = -129.0
 text = "Rupees:"
 
+[node name="rupee2" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(-418, -30)
+
 [node name="rupee" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-608, 4)
+
+[node name="rupee7" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(487, -102)
+
+[node name="rupee8" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(-977, -9)
+
+[node name="rupee3" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(-211, 22)
+
+[node name="rupee4" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(-35, -24)
+
+[node name="rupee5" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(105, -105)
+
+[node name="rupee6" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(263, -173)
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
 [connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]

@@ -7,10 +7,10 @@ script/source = "extends Area2D
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8o1l4"]
-size = Vector2(73, 44)
+size = Vector2(73, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2iur"]
-size = Vector2(71.5, 30)
+size = Vector2(71.5, 34.5)
 
 [node name="dirtblock" type="Area2D"]
 script = SubResource("GDScript_ejx3s")
@@ -22,13 +22,13 @@ hframes = 4
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -24)
+position = Vector2(8, -20.5)
 shape = SubResource("RectangleShape2D_8o1l4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CollisionShape2D"]
 position = Vector2(25, 21)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/StaticBody2D"]
-position = Vector2(-24.5, 1)
+position = Vector2(-24.5, -1.25)
 shape = SubResource("RectangleShape2D_c2iur")
 debug_color = Color(0.832905, 0.360168, 0.40678, 0.42)

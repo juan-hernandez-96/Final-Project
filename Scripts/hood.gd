@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var jump = $jump
 @onready var death: AudioStreamPlayer2D = $death
 @onready var rupee_label = %Label
+@onready var rupee_1: AudioStreamPlayer2D = $rupee1
 
 
 var velocidad = 200
@@ -38,6 +39,7 @@ func _on_portal_1_body_entered(body: Node2D) -> void:
 	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("rupee"):
+		rupee_1.play()
 		set_rupee(rupee_counter + 1)
 		print(rupee_counter)
 
