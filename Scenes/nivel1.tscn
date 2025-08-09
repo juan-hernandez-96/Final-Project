@@ -91,13 +91,19 @@ texture = ExtResource("7_x8yyg")
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
 position = Vector2(-785, 42)
 
-[node name="Label" type="Label" parent="elf"]
+[node name="rupees" type="Label" parent="elf"]
 unique_name_in_owner = true
 offset_left = -273.0
 offset_top = -152.0
 offset_right = -212.0
 offset_bottom = -129.0
 text = "Rupees:"
+
+[node name="label_score" type="Label" parent="elf"]
+offset_left = -271.0
+offset_top = -130.0
+offset_right = -231.0
+offset_bottom = -107.0
 
 [node name="rupee2" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-418, -30)
