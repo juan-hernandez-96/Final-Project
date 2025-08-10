@@ -17,12 +17,14 @@ script = SubResource("GDScript_ejx3s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(-8, 6)
+scale = Vector2(0.857143, 0.890909)
 texture = ExtResource("1_ejx3s")
 hframes = 4
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -20.5)
+position = Vector2(-2, -12)
 shape = SubResource("RectangleShape2D_8o1l4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CollisionShape2D"]

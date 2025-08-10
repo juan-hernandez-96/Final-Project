@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://chosis047cl86"]
+[gd_scene load_steps=13 format=3 uid="uid://chosis047cl86"]
 
 [ext_resource type="AudioStream" uid="uid://doyj5vm5vtsek" path="res://Music/Memories of Green.mp3" id="1_01tp3"]
 [ext_resource type="Texture2D" uid="uid://sfnsnq0c82b8" path="res://Images/Forest.png" id="1_p8b2h"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bo12kexbqxhh" path="res://Scenes/rupee.tscn" id="8_iy3eh"]
 [ext_resource type="Texture2D" uid="uid://dgjb0esscg8d5" path="res://Images/dirtdown.jpg" id="9_j1oeo"]
 [ext_resource type="PackedScene" uid="uid://cgiimfftrgww5" path="res://Scenes/block3.tscn" id="9_y2dbi"]
+[ext_resource type="PackedScene" uid="uid://d4eu8qplg7t2j" path="res://Scenes/block4.tscn" id="11_y2dbi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8yyg"]
 size = Vector2(5957, 50.25)
@@ -17,7 +18,7 @@ size = Vector2(5957, 50.25)
 [node name="Node2D" type="Node2D"]
 
 [node name="Forest" type="Sprite2D" parent="."]
-position = Vector2(-287.813, -254.5)
+position = Vector2(-290, -255)
 scale = Vector2(1.31073, 1.16804)
 texture = ExtResource("1_p8b2h")
 
@@ -40,28 +41,28 @@ autoplay = true
 position = Vector2(-617, 61)
 
 [node name="block3" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-428, 28)
+position = Vector2(-452, 32)
 
 [node name="block" parent="." instance=ExtResource("2_cm6mf")]
 position = Vector2(-799, 93)
 
 [node name="dirtblock" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-221, 77)
+position = Vector2(-294, 69)
 
 [node name="dirtblock2" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-45, 27)
+position = Vector2(-156, 17)
 
 [node name="dirtblock3" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(96, -54)
+position = Vector2(-31, -52)
 
 [node name="dirtblock4" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(254, -120)
+position = Vector2(96, -110)
 
 [node name="dirtblock5" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(482, 55)
+position = Vector2(334, 40)
 
 [node name="Portal1" parent="." instance=ExtResource("4_ynj8v")]
-position = Vector2(485, -9)
+position = Vector2(326, -15)
 
 [node name="dirtblock6" parent="." instance=ExtResource("2_cm6mf")]
 position = Vector2(-1142, -3)
@@ -135,28 +136,28 @@ scale = Vector2(0.955142, 1.62121)
 texture = ExtResource("7_x8yyg")
 
 [node name="rupee2" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-418, -30)
+position = Vector2(-453, -16)
 
 [node name="rupee" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-608, 4)
+position = Vector2(-619, 15)
 
 [node name="rupee7" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(487, -102)
+position = Vector2(324, -102)
 
 [node name="rupee8" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-972, -138)
 
 [node name="rupee3" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-211, 22)
+position = Vector2(-294, 19)
 
 [node name="rupee4" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-35, -30)
+position = Vector2(-157, -28)
 
 [node name="rupee5" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(105, -112)
+position = Vector2(-32, -104)
 
 [node name="rupee6" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(263, -173)
+position = Vector2(93, -161)
 
 [node name="Dirtdown" type="Sprite2D" parent="."]
 position = Vector2(1072, 654.5)
@@ -233,7 +234,7 @@ position = Vector2(-283, 422)
 shape = SubResource("RectangleShape2D_x8yyg")
 
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-789, 42)
+position = Vector2(-797, 42)
 
 [node name="label_score" type="Label" parent="elf"]
 offset_left = -271.0
@@ -248,6 +249,9 @@ offset_top = -152.0
 offset_right = -212.0
 offset_bottom = -129.0
 text = "Rupees:"
+
+[node name="Node2D" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-34, -169)
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
 [connection signal="body_entered" from="Portal2" to="elf" method="_on_portal_2_body_entered"]

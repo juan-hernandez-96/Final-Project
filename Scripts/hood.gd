@@ -5,7 +5,6 @@ extends CharacterBody2D
 @onready var rupee_1: AudioStreamPlayer2D = $rupee1
 @onready var rupees: Label = %rupees
 
-var score : int = 0
 var velocidad = 200
 var brinco = -400
 var gravedad = 1000
@@ -14,8 +13,8 @@ var label_score: Label
 
 func _ready():
 	label_score = $label_score
+	actualizar_label()
 	label_score.text = "Score: %d" % [Global.score]
-	rupees.text = "Rupees: " + str(Global.rupee_counter)
 	$Node2D/AnimationPlayer.play("idle2")
 	add_to_group("jugador")
 
@@ -38,7 +37,7 @@ func _physics_process(delta):
 		cargar_datos_json()
 
 func sumar_puntos(cantidad : int):
-	Global.score += cantidad
+	Global.score += 100
 	actualizar_label()
 
 func actualizar_label():
@@ -131,8 +130,10 @@ func _on_portal_1_body_entered(body: Node2D) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("rupee"):
 		rupee_1.play()
-		set_rupee(rupee_counter + 1)
-		print(rupee_counter)
+		set_rupee(Global.rupee_counter + 1)
+		sumar_puntos(100)
+		print("Score: ", Global.score)
+		print(Global.rupee_counter)
 
 func set_rupee(new_rupee_count: int):
 	Global.rupee_counter = new_rupee_count
