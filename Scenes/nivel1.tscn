@@ -1,28 +1,39 @@
-[gd_scene load_steps=10 format=3 uid="uid://chosis047cl86"]
+[gd_scene load_steps=11 format=3 uid="uid://chosis047cl86"]
 
 [ext_resource type="AudioStream" uid="uid://doyj5vm5vtsek" path="res://Music/Memories of Green.mp3" id="1_01tp3"]
-[ext_resource type="Texture2D" uid="uid://cft3ci8tybmrp" path="res://Images/nivel1bg.png" id="1_s1ye4"]
+[ext_resource type="Texture2D" uid="uid://sfnsnq0c82b8" path="res://Images/Forest.png" id="1_p8b2h"]
 [ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="2_cm6mf"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_01tp3"]
 [ext_resource type="PackedScene" uid="uid://bfe7i88v3sgvj" path="res://Scenes/portal.tscn" id="4_ynj8v"]
 [ext_resource type="PackedScene" uid="uid://bxhb436h13p8o" path="res://Scenes/portal2.tscn" id="5_tvmah"]
 [ext_resource type="Texture2D" uid="uid://d2vuikgrosq4y" path="res://Images/dirt.jpg" id="7_x8yyg"]
 [ext_resource type="PackedScene" uid="uid://bo12kexbqxhh" path="res://Scenes/rupee.tscn" id="8_iy3eh"]
+[ext_resource type="Texture2D" uid="uid://dgjb0esscg8d5" path="res://Images/dirtdown.jpg" id="9_j1oeo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8yyg"]
-size = Vector2(2931, 12.5)
+size = Vector2(5957, 50.25)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Forest" type="Sprite2D" parent="."]
+position = Vector2(-287.813, -254.5)
+scale = Vector2(1.31073, 1.16804)
+texture = ExtResource("1_p8b2h")
+
+[node name="Forest2" type="Sprite2D" parent="."]
+position = Vector2(-2328.25, -253.5)
+scale = Vector2(1.05588, 1.16804)
+texture = ExtResource("1_p8b2h")
+
+[node name="Forest3" type="Sprite2D" parent="."]
+position = Vector2(1754.75, -257)
+scale = Vector2(1.0553, 1.16082)
+texture = ExtResource("1_p8b2h")
 
 [node name="BGmusic1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_01tp3")
 volume_db = -11.514
 autoplay = true
-
-[node name="Forest-and-trees-free-pixel-backgrounds7" type="Sprite2D" parent="."]
-position = Vector2(-288, -70)
-scale = Vector2(1.30317, 0.781648)
-texture = ExtResource("1_s1ye4")
 
 [node name="block2" parent="." instance=ExtResource("2_cm6mf")]
 position = Vector2(-617, 61)
@@ -52,19 +63,53 @@ position = Vector2(482, 55)
 position = Vector2(485, -9)
 
 [node name="dirtblock6" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-1170, 98)
+position = Vector2(-1219, -185)
 
 [node name="Portal2" parent="." instance=ExtResource("5_tvmah")]
-position = Vector2(-1160, 34)
-
-[node name="death_zone" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
-position = Vector2(-365.5, 191.25)
-shape = SubResource("RectangleShape2D_x8yyg")
+position = Vector2(-1211, -250)
 
 [node name="Dirt" type="Sprite2D" parent="."]
 position = Vector2(-1191, 418.5)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt10" type="Sprite2D" parent="."]
+position = Vector2(-3012, 421)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt9" type="Sprite2D" parent="."]
+position = Vector2(-2556, 421)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt8" type="Sprite2D" parent="."]
+position = Vector2(-2100, 420)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt7" type="Sprite2D" parent="."]
+position = Vector2(-1645, 420.25)
+scale = Vector2(1, 1.66288)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt6" type="Sprite2D" parent="."]
+position = Vector2(1071, 414)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt11" type="Sprite2D" parent="."]
+position = Vector2(1528, 415)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt12" type="Sprite2D" parent="."]
+position = Vector2(1979, 416)
+scale = Vector2(1, 1.64394)
+texture = ExtResource("7_x8yyg")
+
+[node name="Dirt13" type="Sprite2D" parent="."]
+position = Vector2(2436, 414)
 scale = Vector2(1, 1.64394)
 texture = ExtResource("7_x8yyg")
 
@@ -89,7 +134,13 @@ scale = Vector2(0.955142, 1.62121)
 texture = ExtResource("7_x8yyg")
 
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-785, 42)
+position = Vector2(-789, 42)
+
+[node name="label_score" type="Label" parent="elf"]
+offset_left = -271.0
+offset_top = -130.0
+offset_right = -231.0
+offset_bottom = -107.0
 
 [node name="rupees" type="Label" parent="elf"]
 unique_name_in_owner = true
@@ -98,12 +149,6 @@ offset_top = -152.0
 offset_right = -212.0
 offset_bottom = -129.0
 text = "Rupees:"
-
-[node name="label_score" type="Label" parent="elf"]
-offset_left = -271.0
-offset_top = -130.0
-offset_right = -231.0
-offset_bottom = -107.0
 
 [node name="rupee2" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-418, -30)
@@ -115,19 +160,90 @@ position = Vector2(-608, 4)
 position = Vector2(487, -102)
 
 [node name="rupee8" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-977, -9)
+position = Vector2(-972, -138)
 
 [node name="rupee3" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-211, 22)
 
 [node name="rupee4" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-35, -24)
+position = Vector2(-35, -30)
 
 [node name="rupee5" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(105, -105)
+position = Vector2(105, -112)
 
 [node name="rupee6" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(263, -173)
+
+[node name="Dirtdown" type="Sprite2D" parent="."]
+position = Vector2(1072, 654.5)
+scale = Vector2(1, 2.20492)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown5" type="Sprite2D" parent="."]
+position = Vector2(612, 659.5)
+scale = Vector2(1, 2.22131)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown6" type="Sprite2D" parent="."]
+position = Vector2(152, 660.5)
+scale = Vector2(1, 2.23771)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown7" type="Sprite2D" parent="."]
+position = Vector2(-303, 660.5)
+scale = Vector2(1, 2.22131)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown8" type="Sprite2D" parent="."]
+position = Vector2(-762, 660.5)
+scale = Vector2(1, 2.18852)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown9" type="Sprite2D" parent="."]
+position = Vector2(-1222, 662.5)
+scale = Vector2(1, 2.22131)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown10" type="Sprite2D" parent="."]
+position = Vector2(-1681, 661.5)
+scale = Vector2(1, 2.18852)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown11" type="Sprite2D" parent="."]
+position = Vector2(-2140, 661)
+scale = Vector2(1, 2.21311)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown12" type="Sprite2D" parent="."]
+position = Vector2(-2599, 661)
+scale = Vector2(1, 2.21311)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown13" type="Sprite2D" parent="."]
+position = Vector2(-3034.5, 663.5)
+scale = Vector2(0.897826, 2.22131)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown2" type="Sprite2D" parent="."]
+position = Vector2(1531, 654.75)
+scale = Vector2(1, 2.18443)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown3" type="Sprite2D" parent="."]
+position = Vector2(1981.5, 656.25)
+scale = Vector2(0.984783, 2.15984)
+texture = ExtResource("9_j1oeo")
+
+[node name="Dirtdown4" type="Sprite2D" parent="."]
+position = Vector2(2436.75, 655.75)
+scale = Vector2(0.996739, 2.20082)
+texture = ExtResource("9_j1oeo")
+
+[node name="death_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
+position = Vector2(-283, 541)
+shape = SubResource("RectangleShape2D_x8yyg")
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
 [connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]

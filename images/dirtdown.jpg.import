@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cft3ci8tybmrp"
-path="res://.godot/imported/nivel1bg.png-51d0eda093262110f42dc46d0f5125a3.ctex"
+uid="uid://dgjb0esscg8d5"
+path="res://.godot/imported/dirtdown.jpg-1b3a3494bd9be457db611b7ddb99b45a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/nivel1bg.png"
-dest_files=["res://.godot/imported/nivel1bg.png-51d0eda093262110f42dc46d0f5125a3.ctex"]
+source_file="res://Images/dirtdown.jpg"
+dest_files=["res://.godot/imported/dirtdown.jpg-1b3a3494bd9be457db611b7ddb99b45a.ctex"]
 
 [params]
 

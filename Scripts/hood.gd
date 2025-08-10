@@ -3,7 +3,6 @@ extends CharacterBody2D
 @onready var jump = $jump
 @onready var death: AudioStreamPlayer2D = $death
 @onready var rupee_1: AudioStreamPlayer2D = $rupee1
-@onready var label_score: Label = $CharacterBody2D/UI/elf/label_score
 @onready var rupees: Label = %rupees
 
 
@@ -12,10 +11,11 @@ var velocidad = 200
 var brinco = -400
 var gravedad = 1000
 var rupee_counter = 0
+var label_score: Label
 
 func _ready():
-	actualizar_label()
-	print(label_score)
+	label_score = $label_score
+	label_score.text = "Score: 0"
 	$Node2D/AnimationPlayer.play("idle2")
 	add_to_group("jugador")
 
@@ -32,9 +32,9 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-	if Input.is_action_just_pressed("save"):
+	if Input.is_action_just_pressed("Save"):
 		guardar_datos_json()
-	if Input.is_action_just_pressed("load"):
+	if Input.is_action_just_pressed("Load"):
 		cargar_datos_json()
 
 func sumar_puntos(cantidad : int):
@@ -91,7 +91,6 @@ func cargar_datos_json():
 	for rupee in get_tree().get_nodes_in_group("rupee"):
 		rupee.queue_free()
 	
-	# Cargar jugador con máxima precisión
 	global_position = Vector2(
 		float(datos["jugador"]["posicion"]["x"]),
 		float(datos["jugador"]["posicion"]["y"])
@@ -99,13 +98,11 @@ func cargar_datos_json():
 	score = datos["jugador"]["score"]
 	actualizar_label()
 	
-	# Recrear objetos
 	for objeto in datos["objetos"]:
 		if !objeto["recolectada"]:
 			var nueva_rupee = preload("res://Scenes/rupee.tscn").instantiate()
 			nueva_rupee.name = objeto["nombre"]
 			
-			# Asegurar que se añade al padre correcto
 			var parent_node = get_node_or_null(objeto["parent_path"])
 			if parent_node:
 				parent_node.add_child(nueva_rupee)
