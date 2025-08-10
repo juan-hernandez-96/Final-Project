@@ -5,7 +5,6 @@ extends CharacterBody2D
 @onready var rupee_1: AudioStreamPlayer2D = $rupee1
 @onready var rupees: Label = %rupees
 
-
 var score : int = 0
 var velocidad = 200
 var brinco = -400
@@ -15,7 +14,8 @@ var label_score: Label
 
 func _ready():
 	label_score = $label_score
-	label_score.text = "Score: 0"
+	label_score.text = "Score: %d" % [Global.score]
+	rupees.text = "Rupees: " + str(Global.rupee_counter)
 	$Node2D/AnimationPlayer.play("idle2")
 	add_to_group("jugador")
 
@@ -38,11 +38,11 @@ func _physics_process(delta):
 		cargar_datos_json()
 
 func sumar_puntos(cantidad : int):
-	score += cantidad
+	Global.score += cantidad
 	actualizar_label()
 
 func actualizar_label():
-	label_score.text = "Points: %d" % [score]
+	label_score.text = "Points: %d" % [Global.score]
 
 func guardar_datos_json():
 	var estado_objetos = []
@@ -60,7 +60,8 @@ func guardar_datos_json():
 	var datos = {
 		"jugador": {
 			"posicion": {"x": "%.8f" % global_position.x, "y": "%.8f" % global_position.y},
-			"score": score
+			"score": Global.score,
+			"rupee_counter": Global.rupee_counter
 		},
 		"objetos": estado_objetos
 	}
@@ -95,8 +96,12 @@ func cargar_datos_json():
 		float(datos["jugador"]["posicion"]["x"]),
 		float(datos["jugador"]["posicion"]["y"])
 	)
-	score = datos["jugador"]["score"]
+	
+	Global.score = datos["jugador"]["score"]
+	Global.rupee_counter = datos["jugador"]["rupee_counter"]
+	
 	actualizar_label()
+	rupees.text = "Rupees: " + str(Global.rupee_counter)
 	
 	for objeto in datos["objetos"]:
 		if !objeto["recolectada"]:
@@ -130,8 +135,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		print(rupee_counter)
 
 func set_rupee(new_rupee_count: int):
-	rupee_counter = new_rupee_count
-	rupees.text = "Rupees: " + str(rupee_counter)
+	Global.rupee_counter = new_rupee_count
+	rupees.text = "Rupees: " + str(Global.rupee_counter)
 
 func _on_portal_2_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/nivel2.tscn")
