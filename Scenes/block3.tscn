@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgiimfftrgww5"]
+
+[ext_resource type="Texture2D" uid="uid://j78xy1647sgl" path="res://Images/bloques.png" id="1_31fii"]
+[ext_resource type="Script" uid="uid://bno3cwrhx7fwu" path="res://Scripts/block_3.gd" id="1_kfwdq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfwdq"]
+size = Vector2(73, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_305mr"]
+size = Vector2(73, 22)
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_kfwdq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_31fii")
+hframes = 4
+vframes = 5
+frame = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -31.5)
+shape = SubResource("RectangleShape2D_kfwdq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionShape2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/StaticBody2D"]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_305mr")
+debug_color = Color(0.319664, 0.312091, 0.15185, 0.42)

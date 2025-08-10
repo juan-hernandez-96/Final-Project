@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://caqgml187ij1b"]
+[gd_scene load_steps=8 format=3 uid="uid://caqgml187ij1b"]
+
+[ext_resource type="Texture2D" uid="uid://dwwfv0ol7ykp0" path="res://Images/sunset.jpg" id="1_bw2je"]
+[ext_resource type="Texture2D" uid="uid://b4ebsaoapkgat" path="res://Images/darksunset.jpg" id="2_28t4s"]
+[ext_resource type="Texture2D" uid="uid://dfsk7gw3htmtj" path="res://Images/darkforest.jpg" id="3_x8gd2"]
+[ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="4_28t4s"]
+[ext_resource type="PackedScene" uid="uid://cgiimfftrgww5" path="res://Scenes/block3.tscn" id="5_4maad"]
+[ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="5_x8gd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sluur"]
+size = Vector2(4603, 29)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.5, 77)
+scale = Vector2(1.99592, 2.1165)
+texture = ExtResource("1_bw2je")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2099, 76.8125)
+scale = Vector2(1.32667, 1.31961)
+texture = ExtResource("2_28t4s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-885.688, 77)
+scale = Vector2(1.9927, 2.10628)
+texture = ExtResource("3_x8gd2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(640.5, 431.5)
+shape = SubResource("RectangleShape2D_sluur")
+
+[node name="dirtblock" parent="." instance=ExtResource("4_28t4s")]
+position = Vector2(-1333, 313)
+
+[node name="Node2D" parent="." instance=ExtResource("5_4maad")]
+position = Vector2(-1138, 229)
+
+[node name="hood" parent="." instance=ExtResource("5_x8gd2")]
+position = Vector2(-1323, 260)

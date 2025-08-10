@@ -133,23 +133,6 @@ position = Vector2(625, 416)
 scale = Vector2(0.955142, 1.62121)
 texture = ExtResource("7_x8yyg")
 
-[node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-789, 42)
-
-[node name="label_score" type="Label" parent="elf"]
-offset_left = -271.0
-offset_top = -130.0
-offset_right = -231.0
-offset_bottom = -107.0
-
-[node name="rupees" type="Label" parent="elf"]
-unique_name_in_owner = true
-offset_left = -273.0
-offset_top = -152.0
-offset_right = -212.0
-offset_bottom = -129.0
-text = "Rupees:"
-
 [node name="rupee2" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-418, -30)
 
@@ -242,8 +225,25 @@ texture = ExtResource("9_j1oeo")
 [node name="death_zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
-position = Vector2(-283, 541)
+position = Vector2(-283, 422)
 shape = SubResource("RectangleShape2D_x8yyg")
+
+[node name="elf" parent="." instance=ExtResource("3_01tp3")]
+position = Vector2(-789, 42)
+
+[node name="label_score" type="Label" parent="elf"]
+offset_left = -271.0
+offset_top = -130.0
+offset_right = -231.0
+offset_bottom = -107.0
+
+[node name="rupees" type="Label" parent="elf"]
+unique_name_in_owner = true
+offset_left = -273.0
+offset_top = -152.0
+offset_right = -212.0
+offset_bottom = -129.0
+text = "Rupees:"
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
 [connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]
