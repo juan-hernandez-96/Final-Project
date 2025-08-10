@@ -27,6 +27,19 @@ position = Vector2(273, 792)
 [node name="hood" parent="." instance=ExtResource("3_bvbaa")]
 position = Vector2(-133, 738)
 
+[node name="label_score" type="Label" parent="hood"]
+offset_left = -280.0
+offset_top = -131.0
+offset_right = -240.0
+offset_bottom = -108.0
+
+[node name="rupees" type="Label" parent="hood"]
+offset_left = -280.0
+offset_top = -156.0
+offset_right = -240.0
+offset_bottom = -133.0
+text = "Rupees: "
+
 [node name="death_zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]

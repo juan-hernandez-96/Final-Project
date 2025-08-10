@@ -14,8 +14,8 @@ func actualizar_plataforma():
 		TipoPlataforma.REBOTE:
 			$Sprite2D.modulate = Color. DIM_GRAY
 
-func _on_Area2D_body_entered(body: Node2D) -> void:
-	if body.is_in_group("character"):
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("jugador"):
 		match type:
 			TipoPlataforma.REBOTE:
 				if body.has_method("puede_rebotar"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://chosis047cl86"]
+[gd_scene load_steps=12 format=3 uid="uid://chosis047cl86"]
 
 [ext_resource type="AudioStream" uid="uid://doyj5vm5vtsek" path="res://Music/Memories of Green.mp3" id="1_01tp3"]
 [ext_resource type="Texture2D" uid="uid://sfnsnq0c82b8" path="res://Images/Forest.png" id="1_p8b2h"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d2vuikgrosq4y" path="res://Images/dirt.jpg" id="7_x8yyg"]
 [ext_resource type="PackedScene" uid="uid://bo12kexbqxhh" path="res://Scenes/rupee.tscn" id="8_iy3eh"]
 [ext_resource type="Texture2D" uid="uid://dgjb0esscg8d5" path="res://Images/dirtdown.jpg" id="9_j1oeo"]
+[ext_resource type="PackedScene" uid="uid://cgiimfftrgww5" path="res://Scenes/block3.tscn" id="9_y2dbi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8yyg"]
 size = Vector2(5957, 50.25)
@@ -63,10 +64,10 @@ position = Vector2(482, 55)
 position = Vector2(485, -9)
 
 [node name="dirtblock6" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-1219, -185)
+position = Vector2(-1142, -3)
 
 [node name="Portal2" parent="." instance=ExtResource("5_tvmah")]
-position = Vector2(-1211, -250)
+position = Vector2(-1136, -81)
 
 [node name="Dirt" type="Sprite2D" parent="."]
 position = Vector2(-1191, 418.5)
@@ -222,6 +223,9 @@ position = Vector2(2436.75, 655.75)
 scale = Vector2(0.996739, 2.20082)
 texture = ExtResource("9_j1oeo")
 
+[node name="jump" parent="." instance=ExtResource("9_y2dbi")]
+position = Vector2(-956, 62)
+
 [node name="death_zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
@@ -246,4 +250,6 @@ offset_bottom = -129.0
 text = "Rupees:"
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
+[connection signal="body_entered" from="Portal2" to="elf" method="_on_portal_2_body_entered"]
+[connection signal="body_entered" from="jump" to="jump" method="_on_body_entered"]
 [connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]

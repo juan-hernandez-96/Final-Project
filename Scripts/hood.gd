@@ -132,3 +132,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func set_rupee(new_rupee_count: int):
 	rupee_counter = new_rupee_count
 	rupees.text = "Rupees: " + str(rupee_counter)
+
+func _on_portal_2_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Scenes/nivel2.tscn")
