@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1u8nd00lp418"]
+
+[ext_resource type="Script" uid="uid://vj60uxutba7a" path="res://Scripts/portal_3.gd" id="1_ffdkn"]
+[ext_resource type="Texture2D" uid="uid://myhmk8p8eiw7" path="res://Images/twiliportal.png" id="1_uj2ey"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffdkn"]
+size = Vector2(52, 53)
+
+[node name="portal3" type="Area2D"]
+script = ExtResource("1_ffdkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(0.129688, 0.114583)
+texture = ExtResource("1_uj2ey")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_ffdkn")

@@ -141,3 +141,6 @@ func set_rupee(new_rupee_count: int):
 
 func _on_portal_2_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/nivel2.tscn")
+
+func _on_portal_3_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Scenes/nivel3.tscn")
