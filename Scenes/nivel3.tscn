@@ -10,8 +10,13 @@ size = Vector2(5101, 29)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="BGmusic3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_28t4s")
+volume_db = 7.123
+autoplay = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1078, 103)
+position = Vector2(-1002, 169)
 scale = Vector2(1.99592, 2.1165)
 texture = ExtResource("1_bw2je")
 
@@ -21,13 +26,22 @@ texture = ExtResource("1_bw2je")
 position = Vector2(391.5, 431.5)
 shape = SubResource("RectangleShape2D_sluur")
 
-[node name="BGmusic3" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_28t4s")
-volume_db = 7.123
-autoplay = true
-
 [node name="dirtblock" parent="." instance=ExtResource("4_28t4s")]
 position = Vector2(-1027, 154)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1095.0
+offset_top = 29.0
+offset_right = -769.0
+offset_bottom = 286.0
+text = "This game's over!
+
+
+
+
+
+
+Thanks for playing!"
 
 [node name="hood" parent="." instance=ExtResource("5_x8gd2")]
 position = Vector2(-1025, 104)

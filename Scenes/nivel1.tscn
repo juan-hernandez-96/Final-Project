@@ -20,6 +20,11 @@ size = Vector2(6024.5, 16.125)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="BGmusic1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_01tp3")
+volume_db = -11.514
+autoplay = true
+
 [node name="Forest2" type="Sprite2D" parent="."]
 position = Vector2(-2323, -419.5)
 scale = Vector2(1.06196, 1.51031)
@@ -34,11 +39,6 @@ texture = ExtResource("1_p8b2h")
 position = Vector2(1751.5, -420.5)
 scale = Vector2(1.05906, 1.49794)
 texture = ExtResource("1_p8b2h")
-
-[node name="BGmusic1" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_01tp3")
-volume_db = -11.514
-autoplay = true
 
 [node name="block2" parent="." instance=ExtResource("2_cm6mf")]
 position = Vector2(-617, 61)
@@ -466,6 +466,35 @@ position = Vector2(2245, 228)
 [node name="rupee36" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(2286, 227)
 
+[node name="message" type="Label" parent="."]
+offset_left = -934.0
+offset_top = -28.0
+offset_right = -627.0
+offset_bottom = 177.0
+text = "To play: move right, left, and up arrows!
+
+
+
+
+
+
+To save and load click the S and L keys!"
+
+[node name="Node2D39" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-879, 107)
+
+[node name="Node2D40" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-928, 94)
+
+[node name="Node2D41" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-977, 84)
+
+[node name="Node2D42" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-1025, 72)
+
+[node name="Node2D43" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-1074, 61)
+
 [node name="elf" parent="." instance=ExtResource("3_01tp3")]
 position = Vector2(-795, 39)
 
@@ -482,21 +511,6 @@ offset_top = -152.0
 offset_right = -212.0
 offset_bottom = -129.0
 text = "Rupees:"
-
-[node name="Node2D39" parent="." instance=ExtResource("11_y2dbi")]
-position = Vector2(-879, 107)
-
-[node name="Node2D40" parent="." instance=ExtResource("11_y2dbi")]
-position = Vector2(-928, 94)
-
-[node name="Node2D41" parent="." instance=ExtResource("11_y2dbi")]
-position = Vector2(-977, 84)
-
-[node name="Node2D42" parent="." instance=ExtResource("11_y2dbi")]
-position = Vector2(-1025, 72)
-
-[node name="Node2D43" parent="." instance=ExtResource("11_y2dbi")]
-position = Vector2(-1074, 61)
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
 [connection signal="body_entered" from="Portal2" to="elf" method="_on_portal_2_body_entered"]

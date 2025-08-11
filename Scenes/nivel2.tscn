@@ -16,6 +16,11 @@ size = Vector2(5534, 45)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="BGmusic2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l8p0v")
+volume_db = 3.562
+autoplay = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(632.405, 1312.5)
 scale = Vector2(2.94099, 3.03852)
@@ -25,11 +30,6 @@ texture = ExtResource("1_gi450")
 position = Vector2(627.5, -3361.63)
 scale = Vector2(6.24291, 8.05971)
 texture = ExtResource("5_cd088")
-
-[node name="BGmusic2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_l8p0v")
-volume_db = 3.562
-autoplay = true
 
 [node name="dirtblock" parent="." instance=ExtResource("2_bvbaa")]
 position = Vector2(-295, 1311)
