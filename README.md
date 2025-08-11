@@ -5,34 +5,34 @@ Hecho por: *Juan Pablo Hernández Arciniega*
 En este juego controlas a Hood, un pequeño y amigable personaje en una aventura donde el objetivo es conseguir rupias. Saltaras de un nivel a otro por medio de distintas plataformas hasta llegar al fin y descubrir lo que te espera allí!
 
 - ***Assests usados***
-- 
-Character sheet
+
+- Character sheet
 
 ![6e954e7b4487f85f814fd3ea5bc1a477](https://github.com/user-attachments/assets/fefa7b79-1739-404c-8061-767f23f7845a)
 
 
-Plataformas usadas dentro de los niveles
+- Plataformas usadas dentro de los niveles
 
 <img width="451" height="553" alt="bloques" src="https://github.com/user-attachments/assets/175760fe-048d-45c7-b634-5abe44b06b77" />
 <img width="166" height="91" alt="rock" src="https://github.com/user-attachments/assets/cf5a7816-82d3-4bcb-8291-23b725af1777" />
 
-Rupia
+- Rupia
 
 <img width="860" height="831" alt="rupia" src="https://github.com/user-attachments/assets/ad0a74dd-8488-4f95-9730-7771578a3af2" />
 
-Portales
+- Portales
 
 <img width="320" height="320" alt="portal2" src="https://github.com/user-attachments/assets/c38b5d87-63cd-4455-8284-ac5eecbaf8dd" />
 <img width="480" height="480" alt="twiliportal" src="https://github.com/user-attachments/assets/57041382-3faa-4001-b310-6a2f9d4bc794" />
 
-Fondos
+- Fondos
 
 <img width="1727" height="970" alt="Forest-and-Trees-Free-Pixel-Backgrounds7" src="https://github.com/user-attachments/assets/cfc63da9-f15a-48c8-9f0e-7cfee3fe11dc" />
-![dirt](https://github.com/user-attachments/assets/0bafa99e-99b5-4572-8348-54a5f892374c)
-![lava](https://github.com/user-attachments/assets/b375be56-14ac-47e0-8ba2-e07212e9baa5)
-![spookyforest](https://github.com/user-attachments/assets/46e1cfdd-f517-4b42-b265-f070490a0652)
-![tower](https://github.com/user-attachments/assets/25c1385f-a3ce-404d-83c6-24ba09a75eda)
-![gygas](https://github.com/user-attachments/assets/5df944e4-59e5-4599-9ff3-7d84037ba331)
+(https://github.com/user-attachments/assets/0bafa99e-99b5-4572-8348-54a5f892374c)
+(https://github.com/user-attachments/assets/b375be56-14ac-47e0-8ba2-e07212e9baa5)
+(https://github.com/user-attachments/assets/46e1cfdd-f517-4b42-b265-f070490a0652)
+(https://github.com/user-attachments/assets/25c1385f-a3ce-404d-83c6-24ba09a75eda)
+(https://github.com/user-attachments/assets/5df944e4-59e5-4599-9ff3-7d84037ba331)
 
 Tambien se hicieron uso de efectos de sonido (que consistieron de un sonido de salto, un sonido cuando se obtiene una rupia y un sonido de muerte), así como tres pistas musicales, una para cada nivel del juego.
 
@@ -287,11 +287,16 @@ func _on_body_entered(body: Node2D) -> void:
 	pass 
 
 -***Demostración*** 
+
 Video 1-.
+
 https://github.com/user-attachments/assets/1ec5bd46-d2db-4cda-867a-c742edb8f306
 
 Video 2-.
+
 https://github.com/user-attachments/assets/43583bbf-c1f0-4c6f-a044-2ae1a2488a65
 
+
 -***Comentarios finales***
+
 Reconozco que no ganaré un premio al mejor juego del años, pero he de decir que la experiencia fue grata y placentera. Usar las diferentes herramientas que el programa GoDOT proporciona fue un deleite, aunado a las herrmaientas que se nos proporcionaron durante las diferentes seciones de clases se puede inferir que el proposito final del proyecto se cumplió debidamente. Algo que me gustó de este trabajo fue la amplia ayuda que es posible encontrar en internet, basta con escribir precisamente que es lo que uno necesita en el buscador y uno puede estar seguro que encontrara una gran cantidad de contenido beneficioso para el aprendizaje.
