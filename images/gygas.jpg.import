@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://imqnvg075f51"
-path="res://.godot/imported/gygas.webp-18dbf44700676e454cb2b3ce52b8706f.ctex"
+uid="uid://4n8ao2ugm8nf"
+path="res://.godot/imported/gygas.jpg-53a7523f2e88c0e71a0a2d7f0d33cab8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/gygas.webp"
-dest_files=["res://.godot/imported/gygas.webp-18dbf44700676e454cb2b3ce52b8706f.ctex"]
+source_file="res://Images/gygas.jpg"
+dest_files=["res://.godot/imported/gygas.jpg-53a7523f2e88c0e71a0a2d7f0d33cab8.ctex"]
 
 [params]
 
