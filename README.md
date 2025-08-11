@@ -34,7 +34,9 @@ En este juego controlas a Hood, un pequeño y amigable personaje en una aventura
 <img src="https://github.com/user-attachments/assets/25c1385f-a3ce-404d-83c6-24ba09a75eda" />
 <img src="https://github.com/user-attachments/assets/5df944e4-59e5-4599-9ff3-7d84037ba331" />
 
+
 Tambien se hicieron uso de efectos de sonido (que consistieron de un sonido de salto, un sonido cuando se obtiene una rupia y un sonido de muerte), así como tres pistas musicales, una para cada nivel del juego.
+
 
 - ***Scripts empleados***
 
