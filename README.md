@@ -28,11 +28,11 @@ En este juego controlas a Hood, un pequeño y amigable personaje en una aventura
 - Fondos
 
 <img width="1727" height="970" alt="Forest-and-Trees-Free-Pixel-Backgrounds7" src="https://github.com/user-attachments/assets/cfc63da9-f15a-48c8-9f0e-7cfee3fe11dc" />
-(https://github.com/user-attachments/assets/0bafa99e-99b5-4572-8348-54a5f892374c)
-(https://github.com/user-attachments/assets/b375be56-14ac-47e0-8ba2-e07212e9baa5)
-(https://github.com/user-attachments/assets/46e1cfdd-f517-4b42-b265-f070490a0652)
-(https://github.com/user-attachments/assets/25c1385f-a3ce-404d-83c6-24ba09a75eda)
-(https://github.com/user-attachments/assets/5df944e4-59e5-4599-9ff3-7d84037ba331)
+<img src="https://github.com/user-attachments/assets/0bafa99e-99b5-4572-8348-54a5f892374c" /> 
+<img src="https://github.com/user-attachments/assets/b375be56-14ac-47e0-8ba2-e07212e9baa5" />
+<img src="https://github.com/user-attachments/assets/46e1cfdd-f517-4b42-b265-f070490a0652" />
+<img src="https://github.com/user-attachments/assets/25c1385f-a3ce-404d-83c6-24ba09a75eda" />
+<img src="https://github.com/user-attachments/assets/5df944e4-59e5-4599-9ff3-7d84037ba331" />
 
 Tambien se hicieron uso de efectos de sonido (que consistieron de un sonido de salto, un sonido cuando se obtiene una rupia y un sonido de muerte), así como tres pistas musicales, una para cada nivel del juego.
 
@@ -40,6 +40,7 @@ Tambien se hicieron uso de efectos de sonido (que consistieron de un sonido de s
 
 _Script de Hood: Script principal de personaje, en el se encuentran la mayoria de las funciones: movimiento del personaje (izquierda, derecha y salto), contador de puntos, así como la función JSON que permite guardas y cargar los datos del personaje (posición y puntaje), las funciones para el area de muerte y las funciones de entrada a los portales; acceso a los niveles del juego._
 
+```gdscript
 extends CharacterBody2D
 
 @onready var jump = $jump
@@ -182,10 +183,12 @@ func _on_portal_3_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/nivel3.tscn")
 
 func _on_node_2d_7_body_entered(body: Node2D) -> void:
-	pass 
+	pass
+```
 
 _El siguiente script fue usado dentro de una de las plataformas, la cual permite que en esta, el personaje pueda rebotar._
- 
+
+```gdscript
  extends Area2D
 
 enum TipoPlataforma {REBOTE}
@@ -209,10 +212,12 @@ func _on_body_entered(body: Node2D) -> void:
 				if body.has_method("puede_rebotar"):
 					body.puede_rebotar(fuerza_rebote)
 				else: 
-					body.velocity.y = body.brinco * fuerza_rebote 
+					body.velocity.y = body.brinco * fuerza_rebote
+```
 
 _Este script hace que la plataforma caiga una vez que el personaje se posicione sobre ella._
 
+```gdscript
 extends Area2D
 
 enum TipoPlataforma {FRAGIL}
@@ -234,9 +239,11 @@ func _on_body_entered(body: Node2D) -> void:
 			TipoPlataforma.FRAGIL:
 				await get_tree().create_timer(.5).timeout
 				queue_free()
+```
 
 _Este script hace que la plataforma se mueva de izquierda a derecha_
 
+```gdscript
 extends Area2D
 
 enum TipoPlataforma {OSCILATORIA}
@@ -259,9 +266,12 @@ func oscilar():
 	tween.set_loops() 
 
 func _on_body_entered(body: Node2D) -> void:
-	pass 
+	pass
+```
 
 _Y este scrpit permite que la plataforma se mueva hacia arriba y abajo_
+
+```gdscript
 extends Area2D
 
 enum TipoPlataforma {OSCILATORIA}
@@ -285,14 +295,18 @@ func oscilar():
 
 func _on_body_entered(body: Node2D) -> void:
 	pass 
+```
 
 -***Demostración*** 
 
 Video 1-.
 
+
 https://github.com/user-attachments/assets/1ec5bd46-d2db-4cda-867a-c742edb8f306
 
+
 Video 2-.
+
 
 https://github.com/user-attachments/assets/43583bbf-c1f0-4c6f-a044-2ae1a2488a65
 
