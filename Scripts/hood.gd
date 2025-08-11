@@ -146,4 +146,4 @@ func _on_portal_3_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/nivel3.tscn")
 
 func _on_node_2d_7_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	pass 
