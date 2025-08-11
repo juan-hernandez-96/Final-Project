@@ -8,3 +8,6 @@ func oscilar():
 	tween.tween_property(self,"position:y",position.y + 5,2)
 	tween.tween_property(self,"position:y",position.y - 5,2)
 	tween.set_loops() 
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

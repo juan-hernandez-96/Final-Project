@@ -1,31 +1,152 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmnfdvrtakowi"]
+[gd_scene load_steps=12 format=3 uid="uid://cmnfdvrtakowi"]
 
-[ext_resource type="Texture2D" uid="uid://c1mdve27lkha8" path="res://Images/nivel2bg.jpg" id="1_bleda"]
+[ext_resource type="Texture2D" uid="uid://cqhlq0rjde6m7" path="res://Images/spookyforest.jpg" id="1_gi450"]
 [ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="2_bvbaa"]
 [ext_resource type="PackedScene" uid="uid://bnhx5o5tln0rt" path="res://Scenes/block2.tscn" id="2_mtcpv"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="3_bvbaa"]
+[ext_resource type="AudioStream" uid="uid://h3h7i348ld1a" path="res://Music/Castle.mp3" id="3_l8p0v"]
+[ext_resource type="Texture2D" uid="uid://b5064ht0ng0de" path="res://Images/tower.jpg" id="5_cd088"]
+[ext_resource type="PackedScene" uid="uid://c4wci6k7ymyub" path="res://Scenes/rock2.tscn" id="7_522i3"]
+[ext_resource type="PackedScene" uid="uid://cgiimfftrgww5" path="res://Scenes/block3.tscn" id="8_522i3"]
+[ext_resource type="PackedScene" uid="uid://12r7ie5x21iw" path="res://Scenes/rock.tscn" id="8_ebdl0"]
+[ext_resource type="PackedScene" uid="uid://d1u8nd00lp418" path="res://Scenes/portal_3.tscn" id="10_yidnl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvbaa"]
-size = Vector2(2976, 45)
+size = Vector2(5534, 45)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(634.75, 440.5)
-scale = Vector2(2.9449, 2.70146)
-texture = ExtResource("1_bleda")
+position = Vector2(632.405, 1312.5)
+scale = Vector2(2.94099, 3.03852)
+texture = ExtResource("1_gi450")
+
+[node name="Tower" type="Sprite2D" parent="."]
+position = Vector2(627.5, -3361.63)
+scale = Vector2(6.24291, 8.05971)
+texture = ExtResource("5_cd088")
+
+[node name="BGmusic2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l8p0v")
+volume_db = 3.562
+autoplay = true
 
 [node name="dirtblock" parent="." instance=ExtResource("2_bvbaa")]
-position = Vector2(-145, 781)
+position = Vector2(-295, 1311)
 
 [node name="Node2D" parent="." instance=ExtResource("2_mtcpv")]
-position = Vector2(26, 798)
+position = Vector2(-146, 1326)
 
 [node name="Node2D2" parent="." instance=ExtResource("2_mtcpv")]
-position = Vector2(273, 792)
+position = Vector2(32, 1325)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(204, 1322)
+
+[node name="Node2D4" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(409, 1322)
+
+[node name="Node2D5" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(606, 1328)
+
+[node name="Node2D6" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(791, 1325)
+
+[node name="Node2D8" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1118, 1174)
+
+[node name="Node2D9" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1289, 1092)
+
+[node name="Node2D10" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1116, 1014)
+
+[node name="Node2D11" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1275, 948)
+
+[node name="Node2D12" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1116, 872)
+
+[node name="Node2D19" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(893, -606)
+
+[node name="Node2D30" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1071, -2254)
+
+[node name="Node2D31" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1281, -2259)
+
+[node name="Node2D32" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1472, -2261)
+
+[node name="Node2D33" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1654, -2263)
+
+[node name="Node2D34" parent="." instance=ExtResource("2_mtcpv")]
+position = Vector2(1843, -2272)
+
+[node name="death_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
+position = Vector2(1209, 1812)
+shape = SubResource("RectangleShape2D_bvbaa")
+
+[node name="Node2D7" parent="." instance=ExtResource("7_522i3")]
+position = Vector2(981, 1300)
+
+[node name="Node2D13" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1044, 817)
+
+[node name="Node2D14" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1166, 585)
+
+[node name="Node2D15" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1435, 339)
+
+[node name="Node2D16" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1183, 87)
+
+[node name="Node2D17" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(952, -145)
+
+[node name="Node2D18" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(707, -372)
+
+[node name="Node2D20" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1117, -589)
+
+[node name="Node2D21" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1221, -882)
+
+[node name="Node2D22" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(1032, -1112)
+
+[node name="Node2D23" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(815, -1319)
+
+[node name="Node2D24" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(585, -1533)
+
+[node name="Node2D25" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(345, -1744)
+
+[node name="Node2D26" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(153, -1999)
+
+[node name="Node2D27" parent="." instance=ExtResource("8_522i3")]
+position = Vector2(338, -2258)
+
+[node name="Node2D28" parent="." instance=ExtResource("8_ebdl0")]
+position = Vector2(538, -2262)
+
+[node name="Node2D29" parent="." instance=ExtResource("8_ebdl0")]
+position = Vector2(849, -2263)
+
+[node name="portal3" parent="." instance=ExtResource("10_yidnl")]
+position = Vector2(1999, -2349)
 
 [node name="hood" parent="." instance=ExtResource("3_bvbaa")]
-position = Vector2(-133, 738)
+position = Vector2(-293, 1261)
 
 [node name="label_score" type="Label" parent="hood"]
 offset_left = -280.0
@@ -40,10 +161,22 @@ offset_right = -240.0
 offset_bottom = -133.0
 text = "Rupees: "
 
-[node name="death_zone" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
-position = Vector2(1047, 855)
-shape = SubResource("RectangleShape2D_bvbaa")
-
 [connection signal="body_entered" from="death_zone" to="hood" method="_on_death_zone_body_entered"]
+[connection signal="body_entered" from="Node2D7" to="hood" method="_on_node_2d_7_body_entered"]
+[connection signal="body_entered" from="Node2D13" to="Node2D13" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D14" to="Node2D14" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D15" to="Node2D15" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D16" to="Node2D16" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D17" to="Node2D17" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D18" to="Node2D18" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D20" to="Node2D20" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D21" to="Node2D21" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D22" to="Node2D22" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D23" to="Node2D23" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D24" to="Node2D24" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D25" to="Node2D25" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D26" to="Node2D26" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D27" to="Node2D27" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D28" to="Node2D28" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D29" to="Node2D29" method="_on_body_entered"]
+[connection signal="body_entered" from="portal3" to="hood" method="_on_portal_3_body_entered"]

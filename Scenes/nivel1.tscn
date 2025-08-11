@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://chosis047cl86"]
+[gd_scene load_steps=16 format=3 uid="uid://chosis047cl86"]
 
 [ext_resource type="AudioStream" uid="uid://doyj5vm5vtsek" path="res://Music/Memories of Green.mp3" id="1_01tp3"]
 [ext_resource type="Texture2D" uid="uid://sfnsnq0c82b8" path="res://Images/Forest.png" id="1_p8b2h"]
@@ -10,28 +10,29 @@
 [ext_resource type="PackedScene" uid="uid://bo12kexbqxhh" path="res://Scenes/rupee.tscn" id="8_iy3eh"]
 [ext_resource type="Texture2D" uid="uid://dgjb0esscg8d5" path="res://Images/dirtdown.jpg" id="9_j1oeo"]
 [ext_resource type="PackedScene" uid="uid://cgiimfftrgww5" path="res://Scenes/block3.tscn" id="9_y2dbi"]
+[ext_resource type="Texture2D" uid="uid://dlmyu7myk67ne" path="res://Images/lava.jpg" id="10_3vjri"]
 [ext_resource type="PackedScene" uid="uid://d4eu8qplg7t2j" path="res://Scenes/block4.tscn" id="11_y2dbi"]
 [ext_resource type="PackedScene" uid="uid://bnhx5o5tln0rt" path="res://Scenes/block2.tscn" id="12_mhdob"]
 [ext_resource type="PackedScene" uid="uid://d1u8nd00lp418" path="res://Scenes/portal_3.tscn" id="13_hcf7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8yyg"]
-size = Vector2(5957, 50.25)
+size = Vector2(6024.5, 16.125)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Forest2" type="Sprite2D" parent="."]
-position = Vector2(-2323, -253.5)
-scale = Vector2(1.06196, 1.16804)
+position = Vector2(-2323, -419.5)
+scale = Vector2(1.06196, 1.51031)
 texture = ExtResource("1_p8b2h")
 
 [node name="Forest" type="Sprite2D" parent="."]
-position = Vector2(-289, -256)
-scale = Vector2(1.31073, 1.16804)
+position = Vector2(-289, -418.25)
+scale = Vector2(1.31073, 1.50258)
 texture = ExtResource("1_p8b2h")
 
 [node name="Forest3" type="Sprite2D" parent="."]
-position = Vector2(1751.5, -258.5)
-scale = Vector2(1.05906, 1.16392)
+position = Vector2(1751.5, -420.5)
+scale = Vector2(1.05906, 1.49794)
 texture = ExtResource("1_p8b2h")
 
 [node name="BGmusic1" type="AudioStreamPlayer2D" parent="."]
@@ -67,10 +68,16 @@ position = Vector2(334, 40)
 position = Vector2(326, -15)
 
 [node name="dirtblock6" parent="." instance=ExtResource("2_cm6mf")]
-position = Vector2(-1142, -3)
+position = Vector2(-1568, -632)
+
+[node name="dirtblock8" parent="." instance=ExtResource("2_cm6mf")]
+position = Vector2(-1734, -634)
+
+[node name="dirtblock7" parent="." instance=ExtResource("2_cm6mf")]
+position = Vector2(-1402, -629)
 
 [node name="Portal2" parent="." instance=ExtResource("5_tvmah")]
-position = Vector2(-1136, -81)
+position = Vector2(-1849, -714)
 
 [node name="Dirt" type="Sprite2D" parent="."]
 position = Vector2(-1191, 418.5)
@@ -147,7 +154,13 @@ position = Vector2(-619, 15)
 position = Vector2(324, -102)
 
 [node name="rupee8" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(-972, -138)
+position = Vector2(-1570, -679)
+
+[node name="rupee9" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(-1336, -183)
+
+[node name="rupee38" parent="." instance=ExtResource("8_iy3eh")]
+position = Vector2(-1363, -445)
 
 [node name="rupee3" parent="." instance=ExtResource("8_iy3eh")]
 position = Vector2(-294, 19)
@@ -227,30 +240,30 @@ scale = Vector2(0.996739, 2.20082)
 texture = ExtResource("9_j1oeo")
 
 [node name="jump" parent="." instance=ExtResource("9_y2dbi")]
-position = Vector2(-956, 62)
+position = Vector2(-1135, 50)
+
+[node name="jump2" parent="." instance=ExtResource("9_y2dbi")]
+position = Vector2(-1314, -117)
+
+[node name="jump4" parent="." instance=ExtResource("9_y2dbi")]
+position = Vector2(-1340, -376)
 
 [node name="death_zone" type="Area2D" parent="."]
+position = Vector2(-25, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone"]
-position = Vector2(-283, 422)
+position = Vector2(-235.25, 537)
 shape = SubResource("RectangleShape2D_x8yyg")
 
-[node name="elf" parent="." instance=ExtResource("3_01tp3")]
-position = Vector2(-797, 42)
+[node name="Lava" type="Sprite2D" parent="death_zone"]
+position = Vector2(-1603, 1345.5)
+scale = Vector2(5.13738, 2.97594)
+texture = ExtResource("10_3vjri")
 
-[node name="label_score" type="Label" parent="elf"]
-offset_left = -271.0
-offset_top = -130.0
-offset_right = -231.0
-offset_bottom = -107.0
-
-[node name="rupees" type="Label" parent="elf"]
-unique_name_in_owner = true
-offset_left = -273.0
-offset_top = -152.0
-offset_right = -212.0
-offset_bottom = -129.0
-text = "Rupees:"
+[node name="Lava2" type="Sprite2D" parent="death_zone"]
+position = Vector2(1352, 1341.5)
+scale = Vector2(4.29074, 2.97594)
+texture = ExtResource("10_3vjri")
 
 [node name="Node2D" parent="." instance=ExtResource("11_y2dbi")]
 position = Vector2(209, 171)
@@ -367,7 +380,7 @@ position = Vector2(2393, 325)
 position = Vector2(2442, 325)
 
 [node name="black_block" parent="." instance=ExtResource("12_mhdob")]
-position = Vector2(2248, 326)
+position = Vector2(2228, 298)
 
 [node name="portal3" parent="." instance=ExtResource("13_hcf7f")]
 position = Vector2(2440, 255)
@@ -445,16 +458,50 @@ position = Vector2(1996, 270)
 position = Vector2(2087, 271)
 
 [node name="rupee34" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(2232, 247)
+position = Vector2(2205, 228)
 
 [node name="rupee35" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(2265, 247)
+position = Vector2(2245, 228)
 
 [node name="rupee36" parent="." instance=ExtResource("8_iy3eh")]
-position = Vector2(2300, 247)
+position = Vector2(2286, 227)
+
+[node name="elf" parent="." instance=ExtResource("3_01tp3")]
+position = Vector2(-795, 39)
+
+[node name="label_score" type="Label" parent="elf"]
+offset_left = -271.0
+offset_top = -130.0
+offset_right = -231.0
+offset_bottom = -107.0
+
+[node name="rupees" type="Label" parent="elf"]
+unique_name_in_owner = true
+offset_left = -273.0
+offset_top = -152.0
+offset_right = -212.0
+offset_bottom = -129.0
+text = "Rupees:"
+
+[node name="Node2D39" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-879, 107)
+
+[node name="Node2D40" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-928, 94)
+
+[node name="Node2D41" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-977, 84)
+
+[node name="Node2D42" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-1025, 72)
+
+[node name="Node2D43" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(-1074, 61)
 
 [connection signal="body_entered" from="Portal1" to="elf" method="_on_portal_1_body_entered"]
 [connection signal="body_entered" from="Portal2" to="elf" method="_on_portal_2_body_entered"]
 [connection signal="body_entered" from="jump" to="jump" method="_on_body_entered"]
+[connection signal="body_entered" from="jump2" to="jump2" method="_on_body_entered"]
+[connection signal="body_entered" from="jump4" to="jump4" method="_on_body_entered"]
 [connection signal="body_entered" from="death_zone" to="elf" method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="portal3" to="elf" method="_on_portal_3_body_entered"]

@@ -122,7 +122,7 @@ func cargar_datos_json():
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	death.play(.15)
 	await get_tree().create_timer(.25).timeout
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/nivel1.tscn")
 	
 func _on_portal_1_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/nivel1.tscn")
@@ -144,3 +144,6 @@ func _on_portal_2_body_entered(body: Node2D) -> void:
 
 func _on_portal_3_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/nivel3.tscn")
+
+func _on_node_2d_7_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

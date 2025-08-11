@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4wci6k7ymyub"]
+
+[ext_resource type="Texture2D" uid="uid://div3bawpwtp0x" path="res://Images/rock.png" id="1_qnycn"]
+[ext_resource type="Script" uid="uid://si4iigcyt1k2" path="res://Scripts/rock_2.gd" id="1_x7q7x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7q7x"]
+size = Vector2(93, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wslnn"]
+size = Vector2(92, 18)
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_x7q7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-3.8147e-06, 3)
+scale = Vector2(0.662651, 0.703297)
+texture = ExtResource("1_qnycn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -20)
+shape = SubResource("RectangleShape2D_x7q7x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionShape2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/StaticBody2D"]
+position = Vector2(-0.5, 11)
+shape = SubResource("RectangleShape2D_wslnn")
+debug_color = Color(0.502025, 0.708694, 0.96884, 0.42)

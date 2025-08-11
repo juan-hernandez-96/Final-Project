@@ -1,46 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://caqgml187ij1b"]
+[gd_scene load_steps=6 format=3 uid="uid://caqgml187ij1b"]
 
-[ext_resource type="Texture2D" uid="uid://dwwfv0ol7ykp0" path="res://Images/sunset.jpg" id="1_bw2je"]
-[ext_resource type="Texture2D" uid="uid://b4ebsaoapkgat" path="res://Images/darksunset.jpg" id="2_28t4s"]
-[ext_resource type="Texture2D" uid="uid://dfsk7gw3htmtj" path="res://Images/darkforest.jpg" id="3_x8gd2"]
+[ext_resource type="Texture2D" uid="uid://imqnvg075f51" path="res://Images/gygas.webp" id="1_bw2je"]
+[ext_resource type="AudioStream" uid="uid://bvmt8rvndviwj" path="res://Music/Sonic music.mp3" id="2_28t4s"]
 [ext_resource type="PackedScene" uid="uid://b8576j60qiof1" path="res://Scenes/block.tscn" id="4_28t4s"]
-[ext_resource type="PackedScene" uid="uid://cgiimfftrgww5" path="res://Scenes/block3.tscn" id="5_4maad"]
 [ext_resource type="PackedScene" uid="uid://ckxad18w3ww7g" path="res://Scenes/mega.tscn" id="5_x8gd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sluur"]
-size = Vector2(4603, 29)
+size = Vector2(5101, 29)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577.5, 77)
+position = Vector2(-1078, 103)
 scale = Vector2(1.99592, 2.1165)
 texture = ExtResource("1_bw2je")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(2099, 76.8125)
-scale = Vector2(1.32667, 1.31961)
-texture = ExtResource("2_28t4s")
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(-885.688, 77)
-scale = Vector2(1.9927, 2.10628)
-texture = ExtResource("3_x8gd2")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(640.5, 431.5)
+position = Vector2(391.5, 431.5)
 shape = SubResource("RectangleShape2D_sluur")
 
-[node name="dirtblock" parent="." instance=ExtResource("4_28t4s")]
-position = Vector2(-1333, 313)
+[node name="BGmusic3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_28t4s")
+volume_db = 7.123
+autoplay = true
 
-[node name="Node2D" parent="." instance=ExtResource("5_4maad")]
-position = Vector2(-1177, 251)
+[node name="dirtblock" parent="." instance=ExtResource("4_28t4s")]
+position = Vector2(-1027, 154)
 
 [node name="hood" parent="." instance=ExtResource("5_x8gd2")]
-position = Vector2(-1323, 260)
+position = Vector2(-1025, 104)
 
 [node name="label_score" type="Label" parent="hood"]
 offset_left = -281.0
@@ -54,5 +44,3 @@ offset_top = -158.0
 offset_right = -243.0
 offset_bottom = -135.0
 text = "Rupees: "
-
-[connection signal="body_entered" from="Node2D" to="Node2D" method="_on_body_entered"]

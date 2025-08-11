@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1mdve27lkha8"
-path="res://.godot/imported/nivel2bg.jpg-3812544491c98c02ccfdb9542ec8c042.ctex"
+uid="uid://dlmyu7myk67ne"
+path="res://.godot/imported/lava.jpg-dccc2027ae598ae5e44622bf00e31b89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/nivel2bg.jpg"
-dest_files=["res://.godot/imported/nivel2bg.jpg-3812544491c98c02ccfdb9542ec8c042.ctex"]
+source_file="res://Images/lava.jpg"
+dest_files=["res://.godot/imported/lava.jpg-dccc2027ae598ae5e44622bf00e31b89.ctex"]
 
 [params]
 

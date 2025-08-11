@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfsk7gw3htmtj"
-path="res://.godot/imported/darkforest.jpg-f4ec29ee14bca733429e41f1446753a8.ctex"
+uid="uid://b5064ht0ng0de"
+path="res://.godot/imported/tower.jpg-67e510edc2621f32dae7d16a1e3e7878.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/darkforest.jpg"
-dest_files=["res://.godot/imported/darkforest.jpg-f4ec29ee14bca733429e41f1446753a8.ctex"]
+source_file="res://Images/tower.jpg"
+dest_files=["res://.godot/imported/tower.jpg-67e510edc2621f32dae7d16a1e3e7878.ctex"]
 
 [params]
 
