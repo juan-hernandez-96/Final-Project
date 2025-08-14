@@ -12,9 +12,10 @@ var rupee_counter = 0
 var label_score: Label
 
 func _ready():
-	label_score = $label_score
+	label_score = get_node_or_null("label_score")
 	actualizar_label()
-	label_score.text = "Score: %d" % [Global.score]
+	if label_score:
+		label_score.text = "Score: %d" % [Global.score]
 	$Node2D/AnimationPlayer.play("idle2")
 	add_to_group("jugador")
 
@@ -41,7 +42,8 @@ func sumar_puntos(cantidad : int):
 	actualizar_label()
 
 func actualizar_label():
-	label_score.text = "Points: %d" % [Global.score]
+	if label_score:
+		label_score.text = "Points: %d" % [Global.score]
 
 func guardar_datos_json():
 	var estado_objetos = []
@@ -99,8 +101,12 @@ func cargar_datos_json():
 	Global.score = datos["jugador"]["score"]
 	Global.rupee_counter = datos["jugador"]["rupee_counter"]
 	
+	label_score = get_node_or_null("label_score")
+	rupees = get_node_or_null("rupees")
+	
 	actualizar_label()
-	rupees.text = "Rupees: " + str(Global.rupee_counter)
+	if rupees:
+		rupees.text = "Rupees: " + str(Global.rupee_counter)
 	
 	for objeto in datos["objetos"]:
 		if !objeto["recolectada"]:
